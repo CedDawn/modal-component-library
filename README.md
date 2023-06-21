@@ -34,3 +34,6 @@ You can use these parameters to modify the bearing of the Modal:
 | open | If the modal is already open when the page is loaded | boolean | false | false |
 | disableCloseBtn | Remove the close button | boolean | false | false |
 | disableCloseBkg | Click outside the Modal won't close it anymore | boolean | false | false |
+
+## Exemples
+[Simple Modal](https://codesandbox.io/p/sandbox/simple-dawn-modal-yqxn75)
