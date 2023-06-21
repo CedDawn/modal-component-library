@@ -1,6 +1,6 @@
 {
   "name": "simple-dawn-modal",
-  "version": "0.1.3",
+  "version": "0.1.4",
   "description": "Simple modal component and functions to display messages",
   "keywords": [
     "react",
