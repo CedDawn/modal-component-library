@@ -10,6 +10,12 @@ Run the following command:
 npm install simple-dawn-modal
 ```
 
+## Recommended tools
+
+- Integrated Development Environment (IDE): [Visual Studio Code](https://code.visualstudio.com)
+- [NodeJS (version 18.6.0)](https://nodejs.org/en)
+- [npm](https://docs.npmjs.com/downloading-and-installing-node-js-and-npm)
+
 ## How to use
 
 First you'll need to import the Modal and its open function with the line:
