@@ -15,7 +15,16 @@ function Modal(_ref) {
     _ref$disableCloseBtn = _ref.disableCloseBtn,
     disableCloseBtn = _ref$disableCloseBtn === void 0 ? false : _ref$disableCloseBtn,
     _ref$disableCloseBkg = _ref.disableCloseBkg,
-    disableCloseBkg = _ref$disableCloseBkg === void 0 ? false : _ref$disableCloseBkg;
+    disableCloseBkg = _ref$disableCloseBkg === void 0 ? false : _ref$disableCloseBkg,
+    _ref$disableCloseEsca = _ref.disableCloseEscape,
+    disableCloseEscape = _ref$disableCloseEsca === void 0 ? false : _ref$disableCloseEsca;
+  if (disableCloseEscape === false) {
+    document.addEventListener('keydown', function (event) {
+      if (event.key === 'Escape') {
+        (0, _.handleClose)();
+      }
+    });
+  }
   return /*#__PURE__*/_react.default.createElement("div", {
     className: open ? 'simple-modal-container' : 'simple-modal-container hide-modal'
   }, disableCloseBkg ? '' : /*#__PURE__*/_react.default.createElement("div", {
@@ -28,43 +37,5 @@ function Modal(_ref) {
     className: "simple-modal-close"
   })));
 }
-
-// class Modal extends Component {
-//   constructor(props) {
-//     super(props)
-//     this.state = {
-//       hideModal: true,
-//       content: this.props.content,
-//     }
-//   }
-
-//   closeModal() {
-//     console.log('coucou2')
-//     this.setState({ hideModal: true })
-//   }
-
-//   openModal() {
-//     console.log('coucou')
-//     this.setState({ hideModal: false })
-//   }
-
-//   render() {
-//     const { hideModal } = this.state
-//     console.log(this.state)
-//     return (
-//       <div
-//         className={'simple-modal-container ' + (hideModal ? 'hide-modal' : '')}
-//       >
-//         <div className="simple-modal">
-//           <p>{'oui'}</p>
-//           <div
-//             onClick={() => this.closeModal()}
-//             className="simple-modal-close"
-//           ></div>
-//         </div>
-//       </div>
-//     )
-//   }
-// }
 var _default = Modal;
 exports.default = _default;

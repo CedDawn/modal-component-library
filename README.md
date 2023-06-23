@@ -29,7 +29,7 @@ import { Modal, handleOpen } from 'simple-dawn-modal'
 Then you can simply use them as this way:
 
 ```html
-<button onClick={handleOpen}>Show me my Modal</button>
+<button onClick="{handleOpen}">Show me my Modal</button>
 <Modal content="Exemple of what you could write in there." />
 ```
 
@@ -37,9 +37,11 @@ You can use these parameters to modify the bearing of the Modal:
 | Parameters | Description | Format | Default Value | Required |
 | --------------- | ---------------------------------------------------- | ------- | ------------- | -------- |
 | content | The content of the Modal | string | none | true |
-| open | If the modal is already open when the page is loaded | boolean | false | false |
+| open | If the Modal is already open when the page is loaded | boolean | false | false |
 | disableCloseBtn | Remove the close button | boolean | false | false |
 | disableCloseBkg | Click outside the Modal won't close it anymore | boolean | false | false |
+| disableCloseEscape | Press Escape won't close the Modal anymore | boolean | false | false |
 
 ## Exemples
+
 [Simple Modal](https://codesandbox.io/p/sandbox/simple-dawn-modal-yqxn75)

@@ -7,7 +7,15 @@ function Modal({
   open = false,
   disableCloseBtn = false,
   disableCloseBkg = false,
+  disableCloseEscape = false,
 }) {
+  if (disableCloseEscape === false) {
+    document.addEventListener('keydown', function (event) {
+      if (event.key === 'Escape') {
+        handleClose()
+      }
+    })
+  }
   return (
     <div
       className={
@@ -34,43 +42,5 @@ function Modal({
     </div>
   )
 }
-
-// class Modal extends Component {
-//   constructor(props) {
-//     super(props)
-//     this.state = {
-//       hideModal: true,
-//       content: this.props.content,
-//     }
-//   }
-
-//   closeModal() {
-//     console.log('coucou2')
-//     this.setState({ hideModal: true })
-//   }
-
-//   openModal() {
-//     console.log('coucou')
-//     this.setState({ hideModal: false })
-//   }
-
-//   render() {
-//     const { hideModal } = this.state
-//     console.log(this.state)
-//     return (
-//       <div
-//         className={'simple-modal-container ' + (hideModal ? 'hide-modal' : '')}
-//       >
-//         <div className="simple-modal">
-//           <p>{'oui'}</p>
-//           <div
-//             onClick={() => this.closeModal()}
-//             className="simple-modal-close"
-//           ></div>
-//         </div>
-//       </div>
-//     )
-//   }
-// }
 
 export default Modal
